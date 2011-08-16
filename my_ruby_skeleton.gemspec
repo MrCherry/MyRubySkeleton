@@ -19,5 +19,4 @@ Gem::Specification.new do |s|
   
   s.require_paths = ["lib"]
   s.bindir        = ["bin"]
-  s.autorequire   = "my_ruby_skeleton"
 end

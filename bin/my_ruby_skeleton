@@ -1,11 +1,15 @@
 #!/usr/bin/env ruby
 
-require 'my_ruby_skeleton'
-
 begin
+	require 'my_ruby_skeleton'
+	require 'rubygems'
+	require 'bundler'
+	ENV["BUNDLE_GEMFILE"] = File.expand_path('../../Gemfile', __FILE__)
 	puts "Message from " + __FILE__
-rescue 
-	puts "Problem..."
+	puts `bundle exec`
+	puts `bundle install --deployment`
+rescue Exception => e
+	puts "Problem: " + e.to_s
 ensure
 	exit 1
 end
