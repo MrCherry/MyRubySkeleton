@@ -1,2 +1,11 @@
-puts "Exec"
-echo "MM..."
+require 'rubygems'
+
+version = ">= 0"
+
+if ARGV.first =~ /^_(.*)_$/ and Gem::Version.correct? $1 then
+  version = $1
+  ARGV.shift
+end
+
+gem 'my_ruby_skeleton', version
+load Gem.bin_path('my_ruby_skeleton', 'my_ruby_skeleton', version)
