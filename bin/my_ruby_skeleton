@@ -1,12 +1,11 @@
 #!/usr/bin/env ruby
 
+require 'my_ruby_skeleton'
+
 begin
-  require 'rubygems'
-  require_gem 'my_ruby_skeleton', '= 0.0.1'
-rescue LoadError
-  nil
+	puts "Fuck Yeah!"
+rescue 
+	puts "Shit!!!"
+ensure
+	exit 1
 end
-
-puts "It's a bin's Message"
-
-exit Archive::Tar::Minitar::Command.run(ARGV)
