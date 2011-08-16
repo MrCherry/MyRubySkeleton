@@ -1,16 +1,10 @@
 require 'test/unit'
+require_relative '../lib/my_ruby_skeleton.rb'
 
 class MyUnitTests < Test::Unit::TestCase
-  def setup
-    puts "setup!"
-  end
-  
-  def teardown
-    puts "teardown!"
-  end
-  
-  def test_basic
-    puts "I RAN!"
+  def test_skeleton
+    skeleton = MyRubySkeleton.new("myTestSkeleton")
+    assert_equal(skeleton.answer, "myTestSkeleton")
   end
 end
 

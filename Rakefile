@@ -3,13 +3,23 @@
 
 require 'rake'
 require 'rake/testtask'
+require 'rspec/core/rake_task'
 
-task :default => [:test]
+task :default => [:spec]
 desc "Run all unittests"
 
 task :test do
   ruby "test/test_my_ruby_skeleton.rb"
 end
+
+desc "RSpec"
+RSpec::Core::RakeTask.new(:spec) do |t|
+  #t.rspec_files = Dir.glob('spec/**/*_spec.rb')
+  t.rspec_path = File.dirname(__FILE__) + "/spec/"
+  t.rspec_opts = '--format specdoc'
+  #t.rcov = true
+end
+
 
 interesting_files=["README",
                    "LICENSE",
