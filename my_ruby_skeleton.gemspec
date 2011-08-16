@@ -4,7 +4,7 @@ require "my_ruby_skeleton/version"
 
 Gem::Specification.new do |s|
   s.name        = "my_ruby_skeleton"
-  s.version     = my_ruby_skeleton::VERSION::STRING
+  s.version     = MyRubySkeleton::VERSION::STRING
   s.authors     = ["Feodor Cherashev"]
   s.email       = ["mrcherry.pro@gmail.com"]
   s.homepage    = "http://cherashev.ru"

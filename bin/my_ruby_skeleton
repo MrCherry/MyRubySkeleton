@@ -1,11 +1,12 @@
-require 'rubygems'
+#!/usr/bin/env ruby
 
-version = ">= 0"
-
-if ARGV.first =~ /^_(.*)_$/ and Gem::Version.correct? $1 then
-  version = $1
-  ARGV.shift
+begin
+  require 'rubygems'
+  require_gem 'my_ruby_skeleton', '= 0.0.1'
+rescue LoadError
+  nil
 end
 
-gem 'my_ruby_skeleton', version
-load Gem.bin_path('my_ruby_skeleton', 'my_ruby_skeleton', version)
+puts "It's a bin's Message"
+
+exit Archive::Tar::Minitar::Command.run(ARGV)
