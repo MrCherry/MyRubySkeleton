@@ -3,9 +3,9 @@
 require 'my_ruby_skeleton'
 
 begin
-	puts "Fuck Yeah!"
+	puts "Message from " + __FILE__
 rescue 
-	puts "Shit!!!"
+	puts "Problem..."
 ensure
 	exit 1
 end
