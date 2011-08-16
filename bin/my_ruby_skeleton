@@ -6,8 +6,8 @@ begin
 	require 'bundler'
 	ENV["BUNDLE_GEMFILE"] = File.expand_path('../../Gemfile', __FILE__)
 	puts "Message from " + __FILE__
-	puts `bundle exec`
-	puts `bundle install --deployment`
+	puts '------------------'
+	puts `bundle install`
 rescue Exception => e
 	puts "Problem: " + e.to_s
 ensure
